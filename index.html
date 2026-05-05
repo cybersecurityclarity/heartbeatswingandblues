@@ -20,29 +20,46 @@
           <img src="images/logo.png" alt="Heartbeat Swing & Blues 2027" class="logo-img" />
         </a>
         <div class="header-meta">
-          <span class="header-dates">June 11–13, 2027</span>
-          <span class="header-location">Bangkok, Thailand</span>
+          <span class="header-dates" data-i18n="nav.dates">June 11–13, 2027</span>
+          <span class="header-location" data-i18n="nav.location">Bangkok, Thailand</span>
         </div>
       </div>
 
       <nav class="main-nav" id="main-nav">
-        <a href="#home">Home</a>
-        <a href="#registration">Registration</a>
-        <a href="#about">About</a>
-        <a href="#artists">Artists</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#competitions">Competitions</a>
-        <a href="#venues">Venues & Food</a>
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#registration" data-i18n="nav.registration">Registration</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#artists" data-i18n="nav.artists">Artists</a>
+        <a href="#schedule" data-i18n="nav.schedule">Schedule</a>
+        <a href="#competitions" data-i18n="nav.competitions">Competitions</a>
+        <a href="#venues" data-i18n="nav.venues">Venues &amp; Food</a>
+        <div class="nav-social">
+          <a href="https://www.instagram.com/heartbeatswingandblues/" target="_blank" rel="noopener" class="nav-social-link nav-social-link--ig" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span data-i18n="nav.instagram">Follow on Instagram</span>
+          </a>
+          <a href="https://www.youtube.com/@heartbeatswingandblues" target="_blank" rel="noopener" class="nav-social-link nav-social-link--yt" aria-label="YouTube">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span data-i18n="nav.youtube">Follow on YouTube</span>
+          </a>
+        </div>
       </nav>
 
       <div class="header-right">
-        <div class="lang-selector">
-          <button class="lang-btn active" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="th">TH</button>
-          <button class="lang-btn" data-lang="ko">KO</button>
-          <button class="lang-btn" data-lang="zh">ZH</button>
+        <div class="lang-selector" id="lang-selector">
+          <button class="lang-selector-toggle" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-flag" id="current-flag">🇬🇧</span>
+            <span class="lang-select-label" data-i18n="nav.selectLanguage">Select Language</span>
+            <svg class="lang-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3.5l3 3 3-3"/></svg>
+          </button>
+          <div class="lang-dropdown" id="lang-dropdown" role="listbox">
+            <button class="lang-option active" data-lang="en" role="option"><span class="lang-flag">🇬🇧</span> English</button>
+            <button class="lang-option" data-lang="th" role="option"><span class="lang-flag">🇹🇭</span> ภาษาไทย</button>
+            <button class="lang-option" data-lang="ko" role="option"><span class="lang-flag">🇰🇷</span> 한국어</button>
+            <button class="lang-option" data-lang="zh" role="option"><span class="lang-flag">🇨🇳</span> 中文</button>
+          </div>
         </div>
-        <a href="#registration" class="btn btn-primary">Buy Tickets</a>
+        <a href="#registration" class="btn btn-primary" data-i18n="nav.buyTickets">Buy Tickets</a>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -58,33 +75,24 @@
       <div class="shape shape-3"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-badge">Lindy Hop · Balboa · Blues</div>
+      <div class="hero-badge" data-i18n="hero.badge">Lindy Hop · Balboa · Blues</div>
       <h1 class="hero-title">
         <span class="hero-title-main">Heartbeat</span>
         <span class="hero-title-sub">Swing &amp; Blues 2027</span>
       </h1>
-      <p class="hero-tagline">3 Dances · 3 Dance Floors · All Weekend Long</p>
+      <p class="hero-tagline" data-i18n="hero.tagline">3 Dances · 3 Dance Floors · All Weekend Long</p>
       <div class="hero-details">
-        <div class="hero-detail">
-          <span class="detail-icon">📅</span>
-          <span>June 11–13, 2027</span>
-        </div>
-        <div class="hero-detail">
-          <span class="detail-icon">📍</span>
-          <span>Bangkok, Thailand</span>
-        </div>
-        <div class="hero-detail">
-          <span class="detail-icon">🏆</span>
-          <span>3 M&amp;M Competitions</span>
-        </div>
+        <div class="hero-detail"><span class="detail-icon">📅</span><span data-i18n="hero.dates">June 11–13, 2027</span></div>
+        <div class="hero-detail"><span class="detail-icon">📍</span><span data-i18n="hero.location">Bangkok, Thailand</span></div>
+        <div class="hero-detail"><span class="detail-icon">🏆</span><span data-i18n="hero.comps">3 M&amp;M Competitions</span></div>
       </div>
       <div class="hero-ctas">
-        <a href="#registration" class="btn btn-primary btn-large">Buy Tickets</a>
-        <a href="#about" class="btn btn-outline btn-large">Learn More</a>
+        <a href="#registration" class="btn btn-primary btn-large" data-i18n="nav.buyTickets">Buy Tickets</a>
+        <a href="#about" class="btn btn-outline btn-large" data-i18n="hero.learnMore">Learn More</a>
       </div>
     </div>
     <div class="scroll-indicator">
-      <span>Scroll</span>
+      <span data-i18n="hero.scroll">Scroll</span>
       <div class="scroll-arrow"></div>
     </div>
   </section>
@@ -94,22 +102,22 @@
     <div class="highlights-inner">
       <div class="highlight-item">
         <span class="highlight-num">3</span>
-        <span class="highlight-label">Dance Styles</span>
+        <span class="highlight-label" data-i18n="highlights.styles">Dance Styles</span>
       </div>
       <div class="highlight-divider"></div>
       <div class="highlight-item">
         <span class="highlight-num">3</span>
-        <span class="highlight-label">Dance Floors</span>
+        <span class="highlight-label" data-i18n="highlights.floors">Dance Floors</span>
       </div>
       <div class="highlight-divider"></div>
       <div class="highlight-item">
         <span class="highlight-num">3</span>
-        <span class="highlight-label">M&amp;M Comps</span>
+        <span class="highlight-label" data-i18n="highlights.comps">M&amp;M Comps</span>
       </div>
       <div class="highlight-divider"></div>
       <div class="highlight-item">
         <span class="highlight-num">1</span>
-        <span class="highlight-label">Unforgettable Weekend</span>
+        <span class="highlight-label" data-i18n="highlights.weekend">Unforgettable Weekend</span>
       </div>
     </div>
   </div>
@@ -117,46 +125,46 @@
   <!-- ═══════════════════════════════════════════ REGISTRATION ══ -->
   <section class="section" id="registration">
     <div class="container">
-      <div class="section-label">Join Us</div>
-      <h2 class="section-title">Registration</h2>
-      <p class="section-intro">Grab your pass and be part of the most exciting swing & blues weekend in Southeast Asia. Spots are limited — don't miss out!</p>
+      <div class="section-label" data-i18n="reg.label">Join Us</div>
+      <h2 class="section-title" data-i18n="reg.title">Registration</h2>
+      <p class="section-intro" data-i18n="reg.intro">Grab your pass and be part of the most exciting swing &amp; blues weekend in Southeast Asia. Spots are limited — don't miss out!</p>
       <div class="ticket-grid">
         <div class="ticket-card">
-          <div class="ticket-type">Full Pass</div>
+          <div class="ticket-type" data-i18n="reg.fullPass">Full Pass</div>
           <div class="ticket-price"><span class="currency">$</span>XXX</div>
-          <div class="ticket-desc">All classes, all parties, all weekend. The complete Heartbeat experience.</div>
+          <div class="ticket-desc" data-i18n="reg.fullDesc">All classes, all parties, all weekend. The complete Heartbeat experience.</div>
           <ul class="ticket-perks">
-            <li>✓ All workshops (Lindy, Balboa, Blues)</li>
-            <li>✓ All evening social dances</li>
-            <li>✓ Competition entry</li>
-            <li>✓ Catered lunches (Sat & Sun)</li>
-            <li>✓ Beginner lessons included</li>
+            <li data-i18n="reg.fullPerk1">✓ All workshops (Lindy, Balboa, Blues)</li>
+            <li data-i18n="reg.fullPerk2">✓ All evening social dances</li>
+            <li data-i18n="reg.fullPerk3">✓ Competition entry</li>
+            <li data-i18n="reg.fullPerk4">✓ Catered lunches (Sat &amp; Sun)</li>
+            <li data-i18n="reg.fullPerk5">✓ Beginner lessons included</li>
           </ul>
-          <a href="#" class="btn btn-primary">Register — Full Pass</a>
+          <a href="#" class="btn btn-primary" data-i18n="reg.fullCta">Register — Full Pass</a>
         </div>
         <div class="ticket-card ticket-card--featured">
-          <div class="ticket-badge">Most Popular</div>
-          <div class="ticket-type">Party Pass</div>
+          <div class="ticket-badge" data-i18n="reg.popular">Most Popular</div>
+          <div class="ticket-type" data-i18n="reg.partyPass">Party Pass</div>
           <div class="ticket-price"><span class="currency">$</span>XXX</div>
-          <div class="ticket-desc">Dance the nights away with access to all three evening socials.</div>
+          <div class="ticket-desc" data-i18n="reg.partyDesc">Dance the nights away with access to all three evening socials.</div>
           <ul class="ticket-perks">
-            <li>✓ All evening social dances</li>
-            <li>✓ 3 nights of live DJ sets</li>
-            <li>✓ Beginner lessons included</li>
-            <li>✓ Competition spectating</li>
+            <li data-i18n="reg.partyPerk1">✓ All evening social dances</li>
+            <li data-i18n="reg.partyPerk2">✓ 3 nights of live DJ sets</li>
+            <li data-i18n="reg.partyPerk3">✓ Beginner lessons included</li>
+            <li data-i18n="reg.partyPerk4">✓ Competition spectating</li>
           </ul>
-          <a href="#" class="btn btn-primary">Register — Party Pass</a>
+          <a href="#" class="btn btn-primary" data-i18n="reg.partyCta">Register — Party Pass</a>
         </div>
         <div class="ticket-card">
-          <div class="ticket-type">Day Pass</div>
+          <div class="ticket-type" data-i18n="reg.dayPass">Day Pass</div>
           <div class="ticket-price"><span class="currency">$</span>XXX</div>
-          <div class="ticket-desc">Pick your favourite day and dive in. Perfect if you can only make part of the weekend.</div>
+          <div class="ticket-desc" data-i18n="reg.dayDesc">Pick your favourite day and dive in. Perfect if you can only make part of the weekend.</div>
           <ul class="ticket-perks">
-            <li>✓ One full day of classes</li>
-            <li>✓ One evening social dance</li>
-            <li>✓ Beginner lesson included</li>
+            <li data-i18n="reg.dayPerk1">✓ One full day of classes</li>
+            <li data-i18n="reg.dayPerk2">✓ One evening social dance</li>
+            <li data-i18n="reg.dayPerk3">✓ Beginner lesson included</li>
           </ul>
-          <a href="#" class="btn btn-outline">Register — Day Pass</a>
+          <a href="#" class="btn btn-outline" data-i18n="reg.dayCta">Register — Day Pass</a>
         </div>
       </div>
     </div>
@@ -165,34 +173,34 @@
   <!-- ═══════════════════════════════════════════ ABOUT ══ -->
   <section class="section section--dark" id="about">
     <div class="container">
-      <div class="section-label">Our Story</div>
-      <h2 class="section-title section-title--light">What Is Heartbeat?</h2>
+      <div class="section-label" data-i18n="about.label">Our Story</div>
+      <h2 class="section-title section-title--light" data-i18n="about.title">What Is Heartbeat?</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p class="about-lead">Heartbeat Swing &amp; Blues is a swing dance community-oriented event built for one purpose: <em>you</em>.</p>
-          <p>It was imagined and designed as a way to connect dancers, create and grow friendships, and celebrate our mutual love for this dance. We created this event with affordability, accessibility, and attendee enjoyment as the focal part — because we believe extraordinary dance experiences shouldn't be out of reach.</p>
-          <p>The schedule was designed to maximise dance time, the comps are designed to emulate joy, and the entire event was made for one thing: for you, the attendee, to have an unforgettable time.</p>
+          <p class="about-lead" data-i18n="about.lead">Heartbeat Swing &amp; Blues is a swing dance community-oriented event built for one purpose: you.</p>
+          <p data-i18n="about.p1">It was imagined and designed as a way to connect dancers, create and grow friendships, and celebrate our mutual love for this dance. We created this event with affordability, accessibility, and attendee enjoyment as the focal part — because we believe extraordinary dance experiences shouldn't be out of reach.</p>
+          <p data-i18n="about.p2">The schedule was designed to maximise dance time, the comps are designed to emulate joy, and the entire event was made for one thing: for you, the attendee, to have an unforgettable time.</p>
         </div>
         <div class="about-pillars">
           <div class="pillar">
             <div class="pillar-icon">💃</div>
-            <h3>Community First</h3>
-            <p>Built by dancers, for dancers. Every decision prioritises connection and belonging over spectacle.</p>
+            <h3 data-i18n="about.pillar1Title">Community First</h3>
+            <p data-i18n="about.pillar1Desc">Built by dancers, for dancers. Every decision prioritises connection and belonging over spectacle.</p>
           </div>
           <div class="pillar">
             <div class="pillar-icon">💙</div>
-            <h3>Affordable & Accessible</h3>
-            <p>We believe in making world-class dance events within reach for everyone in the community.</p>
+            <h3 data-i18n="about.pillar2Title">Affordable &amp; Accessible</h3>
+            <p data-i18n="about.pillar2Desc">We believe in making world-class dance events within reach for everyone in the community.</p>
           </div>
           <div class="pillar">
             <div class="pillar-icon">🎶</div>
-            <h3>Maximum Dance Time</h3>
-            <p>Everything is scheduled to keep you on the floor. Less waiting, more dancing.</p>
+            <h3 data-i18n="about.pillar3Title">Maximum Dance Time</h3>
+            <p data-i18n="about.pillar3Desc">Everything is scheduled to keep you on the floor. Less waiting, more dancing.</p>
           </div>
           <div class="pillar">
             <div class="pillar-icon">🌏</div>
-            <h3>Welcoming & Inclusive</h3>
-            <p>A safe space built on respect, consent, and celebration of our shared love for movement.</p>
+            <h3 data-i18n="about.pillar4Title">Welcoming &amp; Inclusive</h3>
+            <p data-i18n="about.pillar4Desc">A safe space built on respect, consent, and celebration of our shared love for movement.</p>
           </div>
         </div>
       </div>
@@ -202,86 +210,43 @@
   <!-- ═══════════════════════════════════════════ ARTISTS ══ -->
   <section class="section" id="artists">
     <div class="container">
-      <div class="section-label">The Talent</div>
-      <h2 class="section-title">Artists</h2>
-      <p class="section-intro">We're bringing together incredible instructors and DJs from across the globe. Stay tuned — announcements coming soon!</p>
-
+      <div class="section-label" data-i18n="artists.label">The Talent</div>
+      <h2 class="section-title" data-i18n="artists.title">Artists</h2>
+      <p class="section-intro" data-i18n="artists.intro">We're bringing together incredible instructors and DJs from across the globe. Stay tuned — announcements coming soon!</p>
       <div class="artists-categories">
         <div class="artist-category">
-          <h3 class="artist-cat-title">Lindy Hop Instructors</h3>
+          <h3 class="artist-cat-title" data-i18n="artists.lindy">Lindy Hop Instructors</h3>
           <div class="artist-grid">
-            <div class="artist-card artist-card--placeholder">
-              <div class="artist-photo-placeholder"></div>
-              <div class="artist-name">Coming Soon</div>
-              <div class="artist-role">Lindy Hop Instructor</div>
-            </div>
-            <div class="artist-card artist-card--placeholder">
-              <div class="artist-photo-placeholder"></div>
-              <div class="artist-name">Coming Soon</div>
-              <div class="artist-role">Lindy Hop Instructor</div>
-            </div>
-            <div class="artist-card artist-card--tease">
-              <div class="tease-text">Follow our socials<br />for announcements!</div>
-            </div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.lindyRole">Lindy Hop Instructor</div></div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.lindyRole">Lindy Hop Instructor</div></div>
+            <div class="artist-card artist-card--tease"><div class="tease-text" data-i18n="artists.tease">Follow our socials<br />for announcements!</div></div>
           </div>
         </div>
-
         <div class="artist-category">
-          <h3 class="artist-cat-title">Balboa Instructors</h3>
+          <h3 class="artist-cat-title" data-i18n="artists.balboa">Balboa Instructors</h3>
           <div class="artist-grid">
-            <div class="artist-card artist-card--placeholder">
-              <div class="artist-photo-placeholder"></div>
-              <div class="artist-name">Coming Soon</div>
-              <div class="artist-role">Balboa Instructor</div>
-            </div>
-            <div class="artist-card artist-card--placeholder">
-              <div class="artist-photo-placeholder"></div>
-              <div class="artist-name">Coming Soon</div>
-              <div class="artist-role">Balboa Instructor</div>
-            </div>
-            <div class="artist-card artist-card--tease">
-              <div class="tease-text">Follow our socials<br />for announcements!</div>
-            </div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.balboaRole">Balboa Instructor</div></div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.balboaRole">Balboa Instructor</div></div>
+            <div class="artist-card artist-card--tease"><div class="tease-text" data-i18n="artists.tease">Follow our socials<br />for announcements!</div></div>
           </div>
         </div>
-
         <div class="artist-category">
-          <h3 class="artist-cat-title">Blues Instructors</h3>
+          <h3 class="artist-cat-title" data-i18n="artists.blues">Blues Instructors</h3>
           <div class="artist-grid">
-            <div class="artist-card artist-card--placeholder">
-              <div class="artist-photo-placeholder"></div>
-              <div class="artist-name">Coming Soon</div>
-              <div class="artist-role">Blues Instructor</div>
-            </div>
-            <div class="artist-card artist-card--placeholder">
-              <div class="artist-photo-placeholder"></div>
-              <div class="artist-name">Coming Soon</div>
-              <div class="artist-role">Blues Instructor</div>
-            </div>
-            <div class="artist-card artist-card--tease">
-              <div class="tease-text">Follow our socials<br />for announcements!</div>
-            </div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.bluesRole">Blues Instructor</div></div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.bluesRole">Blues Instructor</div></div>
+            <div class="artist-card artist-card--tease"><div class="tease-text" data-i18n="artists.tease">Follow our socials<br />for announcements!</div></div>
           </div>
         </div>
-
         <div class="artist-category">
-          <h3 class="artist-cat-title">DJs</h3>
+          <h3 class="artist-cat-title" data-i18n="artists.djs">DJs</h3>
           <div class="artist-grid">
-            <div class="artist-card artist-card--placeholder">
-              <div class="artist-photo-placeholder artist-photo-placeholder--dj"></div>
-              <div class="artist-name">Coming Soon</div>
-              <div class="artist-role">DJ</div>
-            </div>
-            <div class="artist-card artist-card--placeholder">
-              <div class="artist-photo-placeholder artist-photo-placeholder--dj"></div>
-              <div class="artist-name">Coming Soon</div>
-              <div class="artist-role">DJ</div>
-            </div>
-            <div class="artist-card artist-card--placeholder">
-              <div class="artist-photo-placeholder artist-photo-placeholder--dj"></div>
-              <div class="artist-name">Coming Soon</div>
-              <div class="artist-role">DJ</div>
-            </div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder artist-photo-placeholder--dj"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.djRole">DJ</div></div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder artist-photo-placeholder--dj"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.djRole">DJ</div></div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder artist-photo-placeholder--dj"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.djRole">DJ</div></div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder artist-photo-placeholder--dj"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.djRole">DJ</div></div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder artist-photo-placeholder--dj"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.djRole">DJ</div></div>
+            <div class="artist-card artist-card--placeholder"><div class="artist-photo-placeholder artist-photo-placeholder--dj"></div><div class="artist-name" data-i18n="artists.comingSoon">Coming Soon</div><div class="artist-role" data-i18n="artists.djRole">DJ</div></div>
           </div>
         </div>
       </div>
@@ -291,181 +256,61 @@
   <!-- ═══════════════════════════════════════════ SCHEDULE ══ -->
   <section class="section section--blue" id="schedule">
     <div class="container">
-      <div class="section-label">Plan Your Weekend</div>
-      <h2 class="section-title section-title--light">Schedule</h2>
-      <p class="section-intro" style="color:rgba(255,255,255,0.8)">Three days packed with classes, socials, comps, and good vibes. All times local Bangkok time (ICT, UTC+7).</p>
-
+      <div class="section-label" data-i18n="sched.label">Plan Your Weekend</div>
+      <h2 class="section-title section-title--light" data-i18n="sched.title">Schedule</h2>
+      <p class="section-intro" style="color:rgba(255,255,255,0.8)" data-i18n="sched.intro">Three days packed with classes, socials, comps, and good vibes. All times local Bangkok time (ICT, UTC+7).</p>
       <div class="schedule-tabs">
-        <button class="schedule-tab active" data-day="friday">Friday, June 11</button>
-        <button class="schedule-tab" data-day="saturday">Saturday, June 12</button>
-        <button class="schedule-tab" data-day="sunday">Sunday, June 13</button>
+        <button class="schedule-tab active" data-day="friday" data-i18n="sched.friday">Friday, June 11</button>
+        <button class="schedule-tab" data-day="saturday" data-i18n="sched.saturday">Saturday, June 12</button>
+        <button class="schedule-tab" data-day="sunday" data-i18n="sched.sunday">Sunday, June 13</button>
       </div>
-
       <div class="schedule-content" id="schedule-content">
+
         <!-- Friday -->
         <div class="schedule-day active" data-day="friday">
           <div class="schedule-events">
-            <div class="schedule-event">
-              <div class="event-time">7:00 PM – 8:00 PM</div>
-              <div class="event-details">
-                <div class="event-name">Beginner Lesson</div>
-                <div class="event-meta">By Rhythm Juice · Swing &amp; Blues</div>
-              </div>
-              <div class="event-tag event-tag--class">Class</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">8:00 PM – 9:30 PM</div>
-              <div class="event-details">
-                <div class="event-name">Opening Social Dance</div>
-                <div class="event-meta">All 3 floors open</div>
-              </div>
-              <div class="event-tag event-tag--social">Social</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">9:30 PM – 10:00 PM</div>
-              <div class="event-details">
-                <div class="event-name">Balboa M&amp;M Prelims</div>
-                <div class="event-meta">Competition</div>
-              </div>
-              <div class="event-tag event-tag--comp">Comp</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">10:00 PM – 3:00 AM</div>
-              <div class="event-details">
-                <div class="event-name">Late Night Social Dance</div>
-                <div class="event-meta">All 3 floors — dance 'til the early hours</div>
-              </div>
-              <div class="event-tag event-tag--social">Social</div>
-            </div>
+            <div class="schedule-event"><div class="event-time">7:00 PM – 8:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.beginnerLesson">Beginner Lesson</div><div class="event-meta">By Rhythm Juice · Swing &amp; Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">8:00 PM – 9:30 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.openingSocial">Opening Social Dance</div><div class="event-meta" data-i18n="sched.allFloors">All 3 floors open</div></div><div class="event-tag event-tag--social" data-i18n="sched.tagSocial">Social</div></div>
+            <div class="schedule-event"><div class="event-time">9:30 PM – 10:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.balboaPrelims">Balboa M&amp;M Prelims</div><div class="event-meta" data-i18n="sched.competition">Competition</div></div><div class="event-tag event-tag--comp" data-i18n="sched.tagComp">Comp</div></div>
+            <div class="schedule-event"><div class="event-time">10:00 PM – 3:00 AM</div><div class="event-details"><div class="event-name" data-i18n="sched.lateNight">Late Night Social Dance</div><div class="event-meta" data-i18n="sched.lateNightMeta">All 3 floors — dance 'til the early hours</div></div><div class="event-tag event-tag--social" data-i18n="sched.tagSocial">Social</div></div>
           </div>
         </div>
 
         <!-- Saturday -->
         <div class="schedule-day" data-day="saturday">
           <div class="schedule-events">
-            <div class="schedule-event">
-              <div class="event-time">10:00 AM – 11:00 AM</div>
-              <div class="event-details"><div class="event-name">Workshop Block 1</div><div class="event-meta">Lindy · Balboa · Blues</div></div>
-              <div class="event-tag event-tag--class">Class</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">11:00 AM – 11:30 AM</div>
-              <div class="event-details"><div class="event-name">Practice Time</div></div>
-              <div class="event-tag event-tag--practice">Practice</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">11:30 AM – 12:30 PM</div>
-              <div class="event-details"><div class="event-name">Workshop Block 2</div><div class="event-meta">Lindy · Balboa · Blues</div></div>
-              <div class="event-tag event-tag--class">Class</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">12:30 PM – 2:30 PM</div>
-              <div class="event-details"><div class="event-name">Catered Lunch + Mental Health Lunch &amp; Learn</div></div>
-              <div class="event-tag event-tag--food">Food</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">2:30 PM – 3:30 PM</div>
-              <div class="event-details"><div class="event-name">Workshop Block 3</div><div class="event-meta">Lindy · Balboa · Blues</div></div>
-              <div class="event-tag event-tag--class">Class</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">3:30 PM – 4:00 PM</div>
-              <div class="event-details"><div class="event-name">Practice Time</div></div>
-              <div class="event-tag event-tag--practice">Practice</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">4:00 PM – 5:00 PM</div>
-              <div class="event-details"><div class="event-name">Workshop Block 4</div><div class="event-meta">Lindy · Balboa · Blues</div></div>
-              <div class="event-tag event-tag--class">Class</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">5:30 PM – 6:30 PM</div>
-              <div class="event-details"><div class="event-name">Lindy &amp; Blues M&amp;M Prelims</div></div>
-              <div class="event-tag event-tag--comp">Comp</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">6:30 PM – 8:00 PM</div>
-              <div class="event-details"><div class="event-name">Dinner Break</div></div>
-              <div class="event-tag event-tag--food">Food</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">7:00 PM – 8:00 PM</div>
-              <div class="event-details"><div class="event-name">Beginner Lesson</div><div class="event-meta">By Jelly Roll · Swing &amp; Blues</div></div>
-              <div class="event-tag event-tag--class">Class</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">8:00 PM – 9:30 PM</div>
-              <div class="event-details"><div class="event-name">Saturday Night Social Dance</div></div>
-              <div class="event-tag event-tag--social">Social</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">9:30 PM – 10:00 PM</div>
-              <div class="event-details"><div class="event-name">Lindy &amp; Blues M&amp;M Finals</div><div class="event-meta">Audience voted via QR code</div></div>
-              <div class="event-tag event-tag--comp">Comp</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">10:00 PM – 3:00 AM</div>
-              <div class="event-details"><div class="event-name">Late Night Social Dance</div></div>
-              <div class="event-tag event-tag--social">Social</div>
-            </div>
+            <div class="schedule-event"><div class="event-time">10:00 AM – 11:00 AM</div><div class="event-details"><div class="event-name" data-i18n="sched.workshop1">Workshop Block 1</div><div class="event-meta">Lindy · Balboa · Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">11:00 AM – 11:30 AM</div><div class="event-details"><div class="event-name" data-i18n="sched.practice">Practice Time</div></div><div class="event-tag event-tag--practice" data-i18n="sched.tagPractice">Practice</div></div>
+            <div class="schedule-event"><div class="event-time">11:30 AM – 12:30 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.workshop2">Workshop Block 2</div><div class="event-meta">Lindy · Balboa · Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">12:30 PM – 2:30 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.lunch">Catered Lunch + Mental Health Lunch &amp; Learn</div></div><div class="event-tag event-tag--food" data-i18n="sched.tagFood">Food</div></div>
+            <div class="schedule-event"><div class="event-time">2:30 PM – 3:30 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.workshop3">Workshop Block 3</div><div class="event-meta">Lindy · Balboa · Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">3:30 PM – 4:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.practice">Practice Time</div></div><div class="event-tag event-tag--practice" data-i18n="sched.tagPractice">Practice</div></div>
+            <div class="schedule-event"><div class="event-time">4:00 PM – 5:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.workshop4">Workshop Block 4</div><div class="event-meta">Lindy · Balboa · Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">5:30 PM – 6:30 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.lindyBluesPrelims">Lindy &amp; Blues M&amp;M Prelims</div></div><div class="event-tag event-tag--comp" data-i18n="sched.tagComp">Comp</div></div>
+            <div class="schedule-event"><div class="event-time">6:30 PM – 8:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.dinner">Dinner Break</div></div><div class="event-tag event-tag--food" data-i18n="sched.tagFood">Food</div></div>
+            <div class="schedule-event"><div class="event-time">7:00 PM – 8:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.beginnerLesson">Beginner Lesson</div><div class="event-meta">By Jelly Roll · Swing &amp; Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">8:00 PM – 9:30 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.satSocial">Saturday Night Social Dance</div></div><div class="event-tag event-tag--social" data-i18n="sched.tagSocial">Social</div></div>
+            <div class="schedule-event"><div class="event-time">9:30 PM – 10:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.lindyBluesFinals">Lindy &amp; Blues M&amp;M Finals</div><div class="event-meta" data-i18n="sched.audienceVoted">Audience voted via QR code</div></div><div class="event-tag event-tag--comp" data-i18n="sched.tagComp">Comp</div></div>
+            <div class="schedule-event"><div class="event-time">10:00 PM – 3:00 AM</div><div class="event-details"><div class="event-name" data-i18n="sched.lateNight">Late Night Social Dance</div></div><div class="event-tag event-tag--social" data-i18n="sched.tagSocial">Social</div></div>
           </div>
         </div>
 
-        <!-- Sunday -->
+        <!-- Sunday — same class structure as Saturday -->
         <div class="schedule-day" data-day="sunday">
           <div class="schedule-events">
-            <div class="schedule-event">
-              <div class="event-time">10:00 AM – 11:00 AM</div>
-              <div class="event-details"><div class="event-name">Private Lessons</div><div class="event-meta">Book directly with instructors</div></div>
-              <div class="event-tag event-tag--class">Private</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">11:00 AM – 11:30 AM</div>
-              <div class="event-details"><div class="event-name">Practice Time</div></div>
-              <div class="event-tag event-tag--practice">Practice</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">11:30 AM – 12:30 PM</div>
-              <div class="event-details"><div class="event-name">Private Lessons</div></div>
-              <div class="event-tag event-tag--class">Private</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">12:30 PM – 2:30 PM</div>
-              <div class="event-details"><div class="event-name">Catered Lunch + Mental Health Lunch &amp; Learn</div></div>
-              <div class="event-tag event-tag--food">Food</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">2:30 PM – 3:30 PM</div>
-              <div class="event-details"><div class="event-name">Private Lessons</div></div>
-              <div class="event-tag event-tag--class">Private</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">3:30 PM – 4:00 PM</div>
-              <div class="event-details"><div class="event-name">Practice Time</div></div>
-              <div class="event-tag event-tag--practice">Practice</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">4:00 PM – 5:00 PM</div>
-              <div class="event-details"><div class="event-name">Private Lessons</div></div>
-              <div class="event-tag event-tag--class">Private</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">6:30 PM – 8:00 PM</div>
-              <div class="event-details"><div class="event-name">Dinner Break</div></div>
-              <div class="event-tag event-tag--food">Food</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">7:00 PM – 8:00 PM</div>
-              <div class="event-details"><div class="event-name">Beginner Lesson</div><div class="event-meta">By The Hop · Swing &amp; Blues</div></div>
-              <div class="event-tag event-tag--class">Class</div>
-            </div>
-            <div class="schedule-event">
-              <div class="event-time">8:00 PM – Midnight</div>
-              <div class="event-details"><div class="event-name">Closing Party Social Dance</div><div class="event-meta">DJ Battle Finals · End the weekend on a high note!</div></div>
-              <div class="event-tag event-tag--social">Social</div>
-            </div>
+            <div class="schedule-event"><div class="event-time">10:00 AM – 11:00 AM</div><div class="event-details"><div class="event-name" data-i18n="sched.workshop1">Workshop Block 1</div><div class="event-meta">Lindy · Balboa · Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">11:00 AM – 11:30 AM</div><div class="event-details"><div class="event-name" data-i18n="sched.practice">Practice Time</div></div><div class="event-tag event-tag--practice" data-i18n="sched.tagPractice">Practice</div></div>
+            <div class="schedule-event"><div class="event-time">11:30 AM – 12:30 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.workshop2">Workshop Block 2</div><div class="event-meta">Lindy · Balboa · Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">12:30 PM – 2:30 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.lunch">Catered Lunch + Mental Health Lunch &amp; Learn</div></div><div class="event-tag event-tag--food" data-i18n="sched.tagFood">Food</div></div>
+            <div class="schedule-event"><div class="event-time">2:30 PM – 3:30 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.workshop3">Workshop Block 3</div><div class="event-meta">Lindy · Balboa · Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">3:30 PM – 4:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.practice">Practice Time</div></div><div class="event-tag event-tag--practice" data-i18n="sched.tagPractice">Practice</div></div>
+            <div class="schedule-event"><div class="event-time">4:00 PM – 5:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.workshop4">Workshop Block 4</div><div class="event-meta">Lindy · Balboa · Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">6:30 PM – 8:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.dinner">Dinner Break</div></div><div class="event-tag event-tag--food" data-i18n="sched.tagFood">Food</div></div>
+            <div class="schedule-event"><div class="event-time">7:00 PM – 8:00 PM</div><div class="event-details"><div class="event-name" data-i18n="sched.beginnerLesson">Beginner Lesson</div><div class="event-meta">By The Hop · Swing &amp; Blues</div></div><div class="event-tag event-tag--class" data-i18n="sched.tagClass">Class</div></div>
+            <div class="schedule-event"><div class="event-time">8:00 PM – Midnight</div><div class="event-details"><div class="event-name" data-i18n="sched.closingParty">Closing Party Social Dance</div><div class="event-meta" data-i18n="sched.closingMeta">DJ Battle Finals · End the weekend on a high note!</div></div><div class="event-tag event-tag--social" data-i18n="sched.tagSocial">Social</div></div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -473,68 +318,73 @@
   <!-- ═══════════════════════════════════════════ COMPETITIONS ══ -->
   <section class="section" id="competitions">
     <div class="container">
-      <div class="section-label">Show Your Moves</div>
-      <h2 class="section-title">Competitions</h2>
-      <p class="section-intro">Our comps are designed with one goal: joy. Whether you're competing or watching, everyone's there to have the best time.</p>
+      <div class="section-label" data-i18n="comp.label">Show Your Moves</div>
+      <h2 class="section-title" data-i18n="comp.title">Competitions</h2>
+      <p class="section-intro" data-i18n="comp.intro">Our comps are designed with one goal: joy. Whether you're competing or watching, everyone's there to have the best time.</p>
 
-      <div class="comp-grid">
+      <!-- Row 1: 3 M&M comps -->
+      <div class="comp-grid comp-grid--three">
         <div class="comp-card">
           <div class="comp-icon">🕺</div>
-          <h3>Lindy Hop M&amp;M</h3>
-          <p>Mix &amp; Match prelims judged by instructors and guests. Finals go to the audience — voted live via QR code.</p>
+          <h3 data-i18n="comp.lindyTitle">Lindy Hop M&amp;M</h3>
+          <p data-i18n="comp.lindyDesc">Mix &amp; Match prelims judged by instructors and guests. Finals go to the audience — voted live via QR code.</p>
           <div class="comp-format">
-            <div class="comp-format-item"><strong>Prelims:</strong> 3 songs (medium → slow → fast), rotating partners. Looking for 6 leads, 6 follows.</div>
-            <div class="comp-format-item"><strong>Finals:</strong> All-skate open, then individual spotlight (1.5–2 min), all-skate close.</div>
-            <div class="comp-format-item"><strong>Rules:</strong> No aerials · No choreography · Have fun!</div>
+            <div class="comp-format-item"><strong data-i18n="comp.prelims">Prelims:</strong> <span data-i18n="comp.prelimsDetail">3 songs (medium → slow → fast), rotating partners. Looking for 6 leads, 6 follows.</span></div>
+            <div class="comp-format-item"><strong data-i18n="comp.finals">Finals:</strong> <span data-i18n="comp.finalsDetail">All-skate open, then individual spotlight (1.5–2 min), all-skate close.</span></div>
+            <div class="comp-format-item"><strong data-i18n="comp.rules">Rules:</strong> <span data-i18n="comp.rulesDetail">No aerials · No choreography · Have fun!</span></div>
           </div>
         </div>
         <div class="comp-card">
           <div class="comp-icon">🎵</div>
-          <h3>Balboa M&amp;M</h3>
-          <p>The same beloved format — special mix &amp; match prelims, audience-voted finals. Pure Balboa joy.</p>
+          <h3 data-i18n="comp.balboaTitle">Balboa M&amp;M</h3>
+          <p data-i18n="comp.balboaDesc">The same beloved format — special mix &amp; match prelims, audience-voted finals. Pure Balboa joy.</p>
           <div class="comp-format">
-            <div class="comp-format-item"><strong>Prelims:</strong> 3 songs (medium → slow → fast), rotating partners. Looking for 6 leads, 6 follows.</div>
-            <div class="comp-format-item"><strong>Finals:</strong> All-skate open, then individual spotlight (1.5–2 min), all-skate close.</div>
-            <div class="comp-format-item"><strong>Rules:</strong> No aerials · No choreography · Have fun!</div>
+            <div class="comp-format-item"><strong data-i18n="comp.prelims">Prelims:</strong> <span data-i18n="comp.prelimsDetail">3 songs (medium → slow → fast), rotating partners. Looking for 6 leads, 6 follows.</span></div>
+            <div class="comp-format-item"><strong data-i18n="comp.finals">Finals:</strong> <span data-i18n="comp.finalsDetail">All-skate open, then individual spotlight (1.5–2 min), all-skate close.</span></div>
+            <div class="comp-format-item"><strong data-i18n="comp.rules">Rules:</strong> <span data-i18n="comp.rulesDetail">No aerials · No choreography · Have fun!</span></div>
           </div>
         </div>
         <div class="comp-card">
           <div class="comp-icon">🎶</div>
-          <h3>Blues M&amp;M</h3>
-          <p>Bring the blues feeling. Prelims judged for connection and energy. Finals decided by your fellow dancers.</p>
+          <h3 data-i18n="comp.bluesTitle">Blues M&amp;M</h3>
+          <p data-i18n="comp.bluesDesc">Bring the blues feeling. Prelims judged for connection and energy. Finals decided by your fellow dancers.</p>
           <div class="comp-format">
-            <div class="comp-format-item"><strong>Prelims:</strong> 3 songs (medium → slow → fast), rotating partners. Looking for 6 leads, 6 follows.</div>
-            <div class="comp-format-item"><strong>Finals:</strong> All-skate open, then individual spotlight (1.5–2 min), all-skate close.</div>
-            <div class="comp-format-item"><strong>Rules:</strong> No aerials · No choreography · Have fun!</div>
+            <div class="comp-format-item"><strong data-i18n="comp.prelims">Prelims:</strong> <span data-i18n="comp.prelimsDetail">3 songs (medium → slow → fast), rotating partners. Looking for 6 leads, 6 follows.</span></div>
+            <div class="comp-format-item"><strong data-i18n="comp.finals">Finals:</strong> <span data-i18n="comp.finalsDetail">All-skate open, then individual spotlight (1.5–2 min), all-skate close.</span></div>
+            <div class="comp-format-item"><strong data-i18n="comp.rules">Rules:</strong> <span data-i18n="comp.rulesDetail">No aerials · No choreography · Have fun!</span></div>
           </div>
         </div>
+      </div>
+
+      <!-- Row 2: centered triangle bottom row -->
+      <div class="comp-grid comp-grid--two-centered">
         <div class="comp-card comp-card--special">
           <div class="comp-icon">❤️</div>
-          <h3>The People's Comp</h3>
-          <p>Every night you'll receive a QR code to nominate 1 lead and 1 follow who gave you the best dance — not about skill level, but about the feeling. Comfort, energy, vibe — you choose.</p>
-          <div class="comp-prize">🏆 Winners receive a free party pass to Heartbeat 2028!</div>
+          <h3 data-i18n="comp.peopleTitle">The People's Comp</h3>
+          <p data-i18n="comp.peopleDesc">Every night you'll receive a QR code to nominate 1 lead and 1 follow who gave you the best dance — not about skill level, but about the feeling. Comfort, energy, vibe — you choose.</p>
+          <div class="comp-prize" data-i18n="comp.peoplePrize">🏆 Winners receive a free party pass to Heartbeat 2028!</div>
         </div>
         <div class="comp-card comp-card--special">
           <div class="comp-icon">🎧</div>
-          <h3>DJ Battle</h3>
-          <p>The best DJs from across Asia face off all weekend. Vote via QR code after each set. The top two Lindy Hop DJs meet in a head-to-head Sunday night finale — playing their absolute best to close the weekend!</p>
+          <h3 data-i18n="comp.djTitle">DJ Battle</h3>
+          <p data-i18n="comp.djDesc">The best DJs from across Asia face off all weekend. Vote via QR code after each set. The top two Lindy Hop DJs meet in a head-to-head Sunday night finale — playing their absolute best to close the weekend!</p>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════ VENUES ══ -->
   <section class="section section--dark" id="venues">
     <div class="container">
-      <div class="section-label">Where To Be</div>
-      <h2 class="section-title section-title--light">Venues &amp; Food</h2>
+      <div class="section-label" data-i18n="venues.label">Where To Be</div>
+      <h2 class="section-title section-title--light" data-i18n="venues.title">Venues &amp; Food</h2>
       <div class="coming-soon-block">
         <div class="coming-soon-icon">🏛️</div>
-        <h3>Venue details coming soon!</h3>
-        <p>We're finalising our incredible Bangkok venue. Follow us on social media to be the first to know where Heartbeat 2027 will take place!</p>
+        <h3 data-i18n="venues.soon">Venue details coming soon!</h3>
+        <p data-i18n="venues.desc">We're finalising our incredible Bangkok venue. Follow us on social media to be the first to know where Heartbeat 2027 will take place!</p>
         <div class="social-links">
-          <a href="#" class="social-link">Instagram</a>
-          <a href="#" class="social-link">Facebook</a>
+          <a href="https://www.instagram.com/heartbeatswingandblues/" target="_blank" rel="noopener" class="social-link" data-i18n="footer.instagram">Instagram</a>
         </div>
       </div>
     </div>
@@ -548,31 +398,38 @@
           <div class="footer-brand">
             <img src="images/logo.png" alt="Heartbeat Swing & Blues 2027" class="footer-logo" />
             <p class="footer-tagline">June 11–13, 2027 · Bangkok, Thailand</p>
-            <p class="footer-commitment">Heartbeat Swing &amp; Blues 2027 is committed to fostering a welcoming, safe, and inclusive environment for all participants. Our team has worked diligently to ensure this event reflects our values of respect, consent, and community. We are excited to bring together dancers from around the world to celebrate the joy of swing and blues!</p>
+            <p class="footer-commitment" data-i18n="footer.commitment">Heartbeat Swing &amp; Blues 2027 is committed to fostering a welcoming, safe, and inclusive environment for all participants. Our team has worked diligently to ensure this event reflects our values of respect, consent, and community. We are excited to bring together dancers from around the world to celebrate the joy of swing and blues!</p>
           </div>
           <div class="footer-links">
-            <h4>Quick Links</h4>
-            <a href="#registration">Buy Tickets</a>
-            <a href="#about">About</a>
-            <a href="#schedule">Schedule</a>
-            <a href="#competitions">Competitions</a>
-            <a href="#venues">Venues &amp; Food</a>
+            <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+            <a href="#registration" data-i18n="nav.buyTickets">Buy Tickets</a>
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#schedule" data-i18n="nav.schedule">Schedule</a>
+            <a href="#competitions" data-i18n="nav.competitions">Competitions</a>
+            <a href="#venues" data-i18n="nav.venues">Venues &amp; Food</a>
           </div>
           <div class="footer-links">
-            <h4>Info</h4>
-            <a href="#faq">FAQ</a>
-            <a href="#policy">Policy</a>
-            <a href="#staff">Staff</a>
-            <a href="#">Contact Us</a>
+            <h4 data-i18n="footer.info">Info</h4>
+            <a href="#faq" data-i18n="footer.faq">FAQ</a>
+            <a href="#policy" data-i18n="footer.policy">Policy</a>
+            <a href="#staff" data-i18n="footer.staff">Staff</a>
+            <a href="mailto:heartbeatswingandblues@gmail.com" data-i18n="footer.contact">Contact Us</a>
           </div>
           <div class="footer-social">
-            <h4>Follow Us</h4>
-            <p>Stay updated with artist announcements, schedule drops, and more.</p>
+            <h4 data-i18n="footer.followUs">Follow Us</h4>
+            <p data-i18n="footer.followDesc">Stay updated with artist announcements, schedule drops, and more.</p>
             <div class="social-handles">
-              <a href="#" class="social-handle">@heartbeatswingblues</a>
+              <a href="https://www.instagram.com/heartbeatswingandblues/" target="_blank" rel="noopener" class="social-handle social-handle--ig">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                @heartbeatswingandblues
+              </a>
+              <a href="https://www.youtube.com/@heartbeatswingandblues" target="_blank" rel="noopener" class="social-handle social-handle--yt">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                @heartbeatswingandblues
+              </a>
             </div>
             <div class="footer-cta">
-              <a href="#registration" class="btn btn-primary">Buy Tickets</a>
+              <a href="#registration" class="btn btn-primary" data-i18n="nav.buyTickets">Buy Tickets</a>
             </div>
           </div>
         </div>
@@ -580,7 +437,7 @@
     </div>
     <div class="footer-partners">
       <div class="container">
-        <h4>Our Partners</h4>
+        <h4 data-i18n="footer.partners">Our Partners</h4>
         <div class="partners-row">
           <div class="partner-placeholder">Partner Logo</div>
           <div class="partner-placeholder">Partner Logo</div>
@@ -591,11 +448,12 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2027 Heartbeat Swing &amp; Blues. All rights reserved.</p>
+        <p data-i18n="footer.copyright">© 2027 Heartbeat Swing &amp; Blues. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
